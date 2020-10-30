@@ -9,7 +9,7 @@ from posts import views
 urlpatterns = [
 
     path(
-        route='',
+        route='posts/',
         view=views.PostsFeedView.as_view(), 
         name='feed'
     ),

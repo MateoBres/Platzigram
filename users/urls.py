@@ -10,7 +10,7 @@ from users import views
 urlpatterns = [
 
     path(
-        route='login/', 
+        route='', 
         view=views.login_view, 
         name='login'
     ),
