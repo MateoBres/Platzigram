@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g%#mue@@9+%3+q!e7b0%eh9dg2=kbxs-#35(h5!em)fz&2!=2$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# Allowed host for production
+ALLOWED_HOSTS = ['matteo.pythonanywhere.com']
 
 
 # Application definition
@@ -83,12 +84,12 @@ WSGI_APPLICATION = 'platzigram.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'platzi',
-        'USER': 'postgres',
-        'PASSWORD': 'Brazil3001@@..',
-        'HOST': '127.0.0.1',
-        'PORT': '5433',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'matteo.mysql.pythonanywhere-services.com',
+        'USER': 'matteo',
+        'PASSWORD': '',
+        'NAME': 'matteo$matteodb',
+        'CHARSET': 'utf8',
     }
 }
 
@@ -144,5 +145,10 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = '/users/login/'
 
+# Check the dev enviroment.
+try:
+    from .settings_dev import *
+except ModuleNotFoundError:
+    pass
 
 
