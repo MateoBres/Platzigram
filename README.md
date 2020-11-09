@@ -1,6 +1,7 @@
 # Platzigram
 
 [Platzigram](http://matteo.pythonanywhere.com/ "Platzigram") is a copy of Instagram used for learning the implementation and use of Django's authentication models and class-based views. 
+I learned how to use and customize the Django auth models and the use of class-based views.
 I created different settings with PostgreSQL for the development environment and settings MySQL for deployment on pythonanywhere.com
 
 ## Instruction
