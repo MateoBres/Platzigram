@@ -1,5 +1,5 @@
 """
-Production's settings, settings_dev.py for dev enviroment
+Settings for production deployment, settings_dev.py for dev enviroment
 """
 
 import os
